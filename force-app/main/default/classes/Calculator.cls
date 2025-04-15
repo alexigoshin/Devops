@@ -17,6 +17,9 @@ public with sharing class Calculator {
     public Integer mul(Integer a, Integer b){
         return a*b;
     }
+    public Integer div(Integer a, Integer b){
+        return a/b;
+    }
     public Integer sqe(Integer a){
         return a*a;
     }
