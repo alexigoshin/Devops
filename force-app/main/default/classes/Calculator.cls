@@ -15,4 +15,8 @@ public with sharing class Calculator {
     {
         return a*b;
     }
+    public Integer div(Integer a, Integer b)
+    {
+        return a/b;
+    }
 }
