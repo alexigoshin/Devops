@@ -10,7 +10,7 @@ node {
     println "SFDC_HOST_DH: ${env.SFDC_HOST_DH}"
     println "SFDC_HOST: ${SFDC_HOST}"
     //def JWT_KEY_CRED_ID = env.JWT_CRED_ID_DH
-    def JWT_KEY_CRED_ID = "64e534df-97e7-4bad-8460-feaea9d2fd1f"
+    def JWT_KEY_CRED_ID = env.JWT_CRED_ID_DH
     println "JWT_CRED_ID_DH: ${env.JWT_CRED_ID_DH}"
     println "JWT_KEY_CRED_ID: ${JWT_KEY_CRED_ID}"
     def CONNECTED_APP_CONSUMER_KEY = env.CONNECTED_APP_CONSUMER_KEY_DH
@@ -32,7 +32,7 @@ node {
 			    //rc = sh returnStatus: true, script: "${toolbelt} sf org login jwt --client-id ${CONNECTED_APP_CONSUMER_KEY} --username ${HUB_ORG} --jwt-key-file ${jwt_key_file} --set-default-dev-hub --instance-url ${SFDC_HOST}"
 	
 		    }else{
-			    rc = bat returnStatus: true, script: "${toolbelt} sf org login jwt --client-id ${CONNECTED_APP_CONSUMER_KEY} --username ${HUB_ORG} --jwt-key-file 64e534df-97e7-4bad-8460-feaea9d2fd1f --set-default-dev-hub --instance-url ${SFDC_HOST}"
+			    rc = bat returnStatus: true, script: "${toolbelt} sf org login jwt --client-id ${CONNECTED_APP_CONSUMER_KEY} --username ${HUB_ORG} --jwt-key-file ${jwt_key_file} --set-default-dev-hub --instance-url ${SFDC_HOST}"
 		            //rc = bat returnStatus: true, script: """ ${toolbelt} sf org login jwt --client-id ${CONNECTED_APP_CONSUMER_KEY} --username ${HUB_ORG} --jwt-key-file %jwt_key_file% --set-default-dev-hub --instance-url ${SFDC_HOST} """
 		    }
 		    if (rc != 0) { 
