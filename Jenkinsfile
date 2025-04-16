@@ -4,16 +4,19 @@ node {
 
     println 'SYSTEM VARIABLES:' 
     def HUB_ORG = env.HUB_ORG_DH
+    println "HUB_ORG_DH: ${env.HUB_ORG_DH}"
     println "HUB_ORG: ${HUB_ORG}"
-    println "HUB_ORG_DH: ${env.HUB_ORG_DH}"	
     def SFDC_HOST = env.SFDC_HOST_DH
-    println "HUB_ORG: ${env.HUB_ORG_DH}" SFDC_HOST
+    println "SFDC_HOST_DH: ${env.SFDC_HOST_DH}"
+    println "SFDC_HOST: ${SFDC_HOST}"
     def JWT_KEY_CRED_ID = env.JWT_CRED_ID_DH
-    println JWT_KEY_CRED_ID
+    println "JWT_CRED_ID_DH: ${env.JWT_CRED_ID_DH}"
+    println "JWT_KEY_CRED_ID: ${JWT_KEY_CRED_ID}"
     def CONNECTED_APP_CONSUMER_KEY = env.CONNECTED_APP_CONSUMER_KEY_DH
-    println CONNECTED_APP_CONSUMER_KEY
+    println "CONNECTED_APP_CONSUMER_KEY_DH: ${env.CONNECTED_APP_CONSUMER_KEY_DH}"
+    println "CONNECTED_APP_CONSUMER_KEY: ${CONNECTED_APP_CONSUMER_KEY}"
     def toolbelt = tool 'toolbelt'
-    println toolbelt
+    println "toolbelt: ${toolbelt}"
 
     stage('checkout source') {
 	    // when running in multi-branch job, one must issue this command
