@@ -39,18 +39,18 @@ node {
 		    	    println 'inside rc not 0'
 			    error 'hub org authorization failed' 
 		    }
-		    //println rc
-		    // deploy 
-		    //if (isUnix()) {
+		    println rc
+		    //deploy 
+		    if (isUnix()) {
 			    //rmsg = sh returnStdout: true, script: "${toolbelt} force:mdapi:deploy -d manifest/. -u ${HUB_ORG}"
 			    //rmsg = sh returnStdout: true, script: "${toolbelt} sf project deploy start --manifest manifest/package.xml --target-org ${HUB_ORG}"
-		    //}else{
-			    //rmsg = bat returnStdout: true, script: "${toolbelt} sf project deploy start --manifest manifest/package.xml --target-org ${HUB_ORG}"
+		    }else{
+			    rmsg = bat returnStdout: true, script: "${toolbelt} sf project deploy start --manifest manifest/package.xml --target-org ${HUB_ORG}"
 			    //rmsg = bat returnStdout: true, script: "${toolbelt} force:mdapi:deploy -d manifest/. -u ${HUB_ORG}"
 		    //}
-		    //printf rmsg
-		    //println('Hello from a Job DSL script!')
-		    //println(rmsg)*/
+		    printf rmsg
+		    println('Hello from a Job DSL script!')
+		    println(rmsg)*/
 	    }
     }
 }
