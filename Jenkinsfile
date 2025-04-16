@@ -33,7 +33,7 @@ node {
 	
 		    }else{
 			    //rc = bat returnStatus: true, script: "${toolbelt} sf org login jwt --client-id ${CONNECTED_APP_CONSUMER_KEY} --username ${HUB_ORG} --jwt-key-file ${jwt_key_file} --set-default-dev-hub --instance-url ${SFDC_HOST}"
-		            //rc = bat returnStatus: true, script: """ ${toolbelt} sf org login jwt --client-id ${CONNECTED_APP_CONSUMER_KEY} --username ${HUB_ORG} --jwt-key-file %jwt_key_file% --set-default-dev-hub --instance-url ${SFDC_HOST} """
+		            rc = bat returnStatus: true, script: """ ${toolbelt} sf org login jwt --client-id ${CONNECTED_APP_CONSUMER_KEY} --username ${HUB_ORG} --jwt-key-file %jwt_key_file% --set-default-dev-hub --instance-url ${SFDC_HOST} """
 		    }
 		    //if (rc != 0) { 
 			    //println 'inside rc not 0'
