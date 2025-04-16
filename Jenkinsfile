@@ -2,19 +2,16 @@
 import groovy.json.JsonSlurperClassic
 node {
 
-environment {
-    HUB_ORG = env.HUB_ORG_DH
-    SFDC_HOST = env.SFDC_HOST_DH
-    JWT_KEY_CRED_ID = env.JWT_CRED_ID_DH
-    CONNECTED_APP_CONSUMER_KEY = env.CONNECTED_APP_CONSUMER_KEY_DH
-    toolbelt = tool 'toolbelt'
-    }
-
     println 'SYSTEM VARIABLES:' 
+    def HUB_ORG = env.HUB_ORG_DH
     println HUB_ORG
+    def SFDC_HOST = env.SFDC_HOST_DH
     println SFDC_HOST
+    def JWT_KEY_CRED_ID = env.JWT_CRED_ID_DH
     println JWT_KEY_CRED_ID
+    def CONNECTED_APP_CONSUMER_KEY = env.CONNECTED_APP_CONSUMER_KEY_DH
     println CONNECTED_APP_CONSUMER_KEY
+    def toolbelt = tool 'toolbelt'
     println toolbelt
 
     stage('checkout source') {
