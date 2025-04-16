@@ -9,7 +9,8 @@ node {
     def SFDC_HOST = env.SFDC_HOST_DH
     println "SFDC_HOST_DH: ${env.SFDC_HOST_DH}"
     println "SFDC_HOST: ${SFDC_HOST}"
-    def JWT_KEY_CRED_ID = env.JWT_CRED_ID_DH
+    //def JWT_KEY_CRED_ID = env.JWT_CRED_ID_DH
+    def JWT_KEY_CRED_ID = "64e534df-97e7-4bad-8460-feaea9d2fd1f"
     println "JWT_CRED_ID_DH: ${env.JWT_CRED_ID_DH}"
     println "JWT_KEY_CRED_ID: ${JWT_KEY_CRED_ID}"
     def CONNECTED_APP_CONSUMER_KEY = env.CONNECTED_APP_CONSUMER_KEY_DH
