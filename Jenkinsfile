@@ -32,25 +32,25 @@ node {
 			    //rc = sh returnStatus: true, script: "${toolbelt} sf org login jwt --client-id ${CONNECTED_APP_CONSUMER_KEY} --username ${HUB_ORG} --jwt-key-file ${jwt_key_file} --set-default-dev-hub --instance-url ${SFDC_HOST}"
 	
 		    }else{
-			    rc = bat returnStatus: true, script: "${toolbelt} sf org login jwt --client-id ${CONNECTED_APP_CONSUMER_KEY} --username ${HUB_ORG} --jwt-key-file ${jwt_key_file} --set-default-dev-hub --instance-url ${SFDC_HOST}"
+			    //rc = bat returnStatus: true, script: "${toolbelt} sf org login jwt --client-id ${CONNECTED_APP_CONSUMER_KEY} --username ${HUB_ORG} --jwt-key-file ${jwt_key_file} --set-default-dev-hub --instance-url ${SFDC_HOST}"
 		            //rc = bat returnStatus: true, script: """ ${toolbelt} sf org login jwt --client-id ${CONNECTED_APP_CONSUMER_KEY} --username ${HUB_ORG} --jwt-key-file %jwt_key_file% --set-default-dev-hub --instance-url ${SFDC_HOST} """
 		    }
-		    if (rc != 0) { 
-			    println 'inside rc not 0'
-			    error 'hub org authorization failed' 
-		    }
-		    println rc
+		    //if (rc != 0) { 
+			    //println 'inside rc not 0'
+			    //error 'hub org authorization failed' 
+		    //}
+		    //println rc
 		    // deploy 
-		    if (isUnix()) {
+		    //if (isUnix()) {
 			    //rmsg = sh returnStdout: true, script: "${toolbelt} force:mdapi:deploy -d manifest/. -u ${HUB_ORG}"
-			    rmsg = sh returnStdout: true, script: "${toolbelt} sf project deploy start --manifest manifest/package.xml --target-org ${HUB_ORG}"
-		    }else{
-			    rmsg = bat returnStdout: true, script: "${toolbelt} sf project deploy start --manifest manifest/package.xml --target-org ${HUB_ORG}"
+			    //rmsg = sh returnStdout: true, script: "${toolbelt} sf project deploy start --manifest manifest/package.xml --target-org ${HUB_ORG}"
+		    //}else{
+			    //rmsg = bat returnStdout: true, script: "${toolbelt} sf project deploy start --manifest manifest/package.xml --target-org ${HUB_ORG}"
 			    //rmsg = bat returnStdout: true, script: "${toolbelt} force:mdapi:deploy -d manifest/. -u ${HUB_ORG}"
-		    }
-		    printf rmsg
-		    println('Hello from a Job DSL script!')
-		    println(rmsg)
+		    //}
+		    //printf rmsg
+		    //println('Hello from a Job DSL script!')
+		    //println(rmsg)*/
 	    }
     }
 }
